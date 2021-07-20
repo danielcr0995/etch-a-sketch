@@ -22,13 +22,21 @@ function create_grid(number_squares, elementid){
         let square=document.createElement('div');
         square.classList.add('square');
         square.style.border='0.5px solid rgb(75, 75, 75)';
-        square.addEventListener('mouseover',function(e){
-            // console.log('click');
-            e.target.style.backgroundColor=`blue`;
-        })
+        square.addEventListener('mouseover',color_grid);
         // square.textContent='.';
         draw.appendChild(square);
     }
+}
+
+function color_grid(e){
+    let randomR=Math.round(Math.random()*255);
+    let randomG=Math.round(Math.random()*255);
+    let randomB=Math.round(Math.random()*255);
+    let color=(randomR,randomG,randomB);
+    // e.target.style.backgroundColor=(randomR,randomG,randomB);
+    // e.target.style.backgroundColor=(randomR,randomG,randomB);
+    e.target.style.backgroundColor=`rgb(${randomR}, ${randomG}, ${randomB})`
+
 }
 
 function gridstyle(number_squares, elementid){
