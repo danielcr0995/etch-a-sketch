@@ -48,4 +48,9 @@ body {
     margin: 10px;
     font-size: 1.3rem;
     font-family: "Brush Script MT",cursive;
+    outline: none;
+}
+
+#btn:hover{
+    background-color: rgb(79, 103, 134);
 }
